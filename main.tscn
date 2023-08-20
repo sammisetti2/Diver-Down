@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://yx7vistqip8e"]
+[gd_scene load_steps=4 format=3 uid="uid://yx7vistqip8e"]
 
+[ext_resource type="PackedScene" uid="uid://l68bvb1w4xdr" path="res://fish.tscn" id="1_8vvhi"]
 [ext_resource type="PackedScene" uid="uid://b1ynmndmu6p7q" path="res://player.tscn" id="1_b0kxl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cjye"]
@@ -8,7 +9,13 @@ size = Vector2(1396, 20)
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_b0kxl")]
-position = Vector2(583, 305)
+position = Vector2(716, 320)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Fish" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("1_8vvhi")]
+position = Vector2(247, 180)
+player = NodePath("../../Player")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = -14.0
