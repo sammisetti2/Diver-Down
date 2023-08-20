@@ -14,10 +14,6 @@ config/name="DiverDown"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
-[dotnet]
-
-project/assembly_name="DiverDown"
-
 [rendering]
 
 renderer/rendering_method="mobile"
