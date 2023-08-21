@@ -43,3 +43,8 @@ func _physics_process(delta):
 			anim.play("Idle")
 	
 	move_and_slide()
+	
+func hurt():
+	print("Player Hurt")
+	get_node("AnimatedSprite2D").play("Hurt")
+	await get_node("AnimatedSprite2D").animation_finished

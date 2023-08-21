@@ -11,13 +11,13 @@ script = ExtResource("1_kvtwv")
 motion_mirroring = Vector2(1150, 650)
 
 [node name="Background" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(146, 130)
-scale = Vector2(1, 1.01563)
+position = Vector2(143.5, 129)
+scale = Vector2(1.01736, 1.02344)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background2" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(427, 129.5)
-scale = Vector2(1, 1.01953)
+position = Vector2(427, 129)
+scale = Vector2(1, 1.02344)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background3" type="Sprite2D" parent="ParallaxLayer"]
@@ -25,7 +25,8 @@ position = Vector2(425, 386)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background4" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(148, 384)
+position = Vector2(145.5, 384)
+scale = Vector2(1.01736, 1)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background5" type="Sprite2D" parent="ParallaxLayer"]
@@ -33,7 +34,7 @@ position = Vector2(711, 382)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background6" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(714, 129.5)
+position = Vector2(712, 126)
 scale = Vector2(1, 1.01172)
 texture = ExtResource("1_cxs5j")
 
@@ -42,18 +43,18 @@ position = Vector2(1002, 135)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background8" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(1004.5, 131.5)
-scale = Vector2(1.01736, 1.02734)
+position = Vector2(1000.5, 131.5)
+scale = Vector2(1.04514, 1.02734)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background9" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(1003, 377)
-scale = Vector2(1.02083, 1)
+position = Vector2(999.5, 377)
+scale = Vector2(1.05903, 1)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background10" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(148, 557)
-scale = Vector2(1, 0.71875)
+position = Vector2(144.5, 557)
+scale = Vector2(1.02431, 0.71875)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background11" type="Sprite2D" parent="ParallaxLayer"]
@@ -61,18 +62,19 @@ position = Vector2(430, 520)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background12" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(710, 519)
+position = Vector2(710, 521)
+scale = Vector2(1, 1.01563)
 texture = ExtResource("1_cxs5j")
 
 [node name="Background13" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(991.5, 520.5)
-scale = Vector2(1.12153, 0.996094)
+position = Vector2(991.5, 522.5)
+scale = Vector2(1.12153, 1.01172)
 texture = ExtResource("1_cxs5j")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1150, 650)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(578.5, 324.5)
-scale = Vector2(1.20313, 1.27539)
+position = Vector2(578.5, 323)
+scale = Vector2(1.20313, 1.26953)
 texture = ExtResource("2_kgnyh")
