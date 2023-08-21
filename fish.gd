@@ -13,7 +13,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	get_node("AnimatedSprite2D").play("Default")
 	print(velocity)
-	
 
 func _physics_process(delta):
 	if chase:
@@ -44,11 +43,13 @@ func _on_player_detection_body_exited(body):
 
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
+		body.hurt()
 		death()
 
 func death():
 	chase = false
 	$FishBody.set_deferred("disabled", true)
+	$PlayerCollision/CollisionShape2D.set_deferred("disabled", true)
 	get_node("AnimatedSprite2D").play("Death")
 	await get_node("AnimatedSprite2D").animation_finished
 	self.queue_free()

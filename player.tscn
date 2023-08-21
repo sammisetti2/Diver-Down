@@ -150,11 +150,36 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_85ntm"]
-radius = 15.0
-height = 62.0
+radius = 13.0
+height = 54.0
 
 [sub_resource type="Animation" id="Animation_1bti5"]
 resource_name = "Hurt"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Hurt"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 4, 0, 1, 2]
+}
 
 [sub_resource type="Animation" id="Animation_evd3p"]
 resource_name = "Idle"
@@ -242,7 +267,7 @@ script = ExtResource("1_ss761")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8a150")
-animation = &"Swimming"
+animation = &"Hurt"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -252,3 +277,8 @@ shape = SubResource("CapsuleShape2D_85ntm")
 libraries = {
 "": SubResource("AnimationLibrary_j0vu7")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
