@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://yx7vistqip8e"]
+[gd_scene load_steps=10 format=3 uid="uid://yx7vistqip8e"]
 
 [ext_resource type="PackedScene" uid="uid://l68bvb1w4xdr" path="res://fish.tscn" id="1_8vvhi"]
 [ext_resource type="PackedScene" uid="uid://b1ynmndmu6p7q" path="res://player.tscn" id="1_b0kxl"]
+[ext_resource type="Script" path="res://main.gd" id="1_cb5mj"]
 [ext_resource type="PackedScene" uid="uid://h8cyd7s4d4ls" path="res://parallax_background.tscn" id="1_fx0nh"]
 [ext_resource type="Texture2D" uid="uid://bi7h072nmxqst" path="res://underwater-diving-files/underwater-diving-files/PNG/environment/tiles.png" id="2_gl80f"]
+[ext_resource type="PackedScene" uid="uid://by77wdp0ngf4q" path="res://treasure.tscn" id="5_7n20v"]
+[ext_resource type="PackedScene" uid="uid://w44stkgdwq0i" path="res://win_screen.tscn" id="7_3pxmi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b04wu"]
 texture = ExtResource("2_gl80f")
@@ -2023,6 +2026,8 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_b04wu")
 
 [node name="Main" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_cb5mj")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_fx0nh")]
 
@@ -2039,3 +2044,11 @@ position = Vector2(716, 320)
 [node name="Fish" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("1_8vvhi")]
 position = Vector2(247, 180)
 player = NodePath("../../Player")
+
+[node name="Treasure" parent="." instance=ExtResource("5_7n20v")]
+position = Vector2(352, 640)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 2
+
+[node name="WinScreen" parent="CanvasLayer" instance=ExtResource("7_3pxmi")]
