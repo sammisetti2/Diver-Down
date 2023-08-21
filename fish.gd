@@ -13,7 +13,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	get_node("AnimatedSprite2D").play("Default")
 	print(velocity)
-	
 
 func _physics_process(delta):
 	if chase:

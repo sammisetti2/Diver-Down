@@ -11,8 +11,11 @@ const SWIM_FRICTION = 10
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 0.09
 var swim_velocity_cap : float = 200
 
+var hurtState
+
 func _ready():
 	anim.play("Idle")
+	hurtState = false
 
 func _physics_process(delta):
 	# Add the water gravity.
@@ -36,15 +39,17 @@ func _physics_process(delta):
 		get_node("AnimatedSprite2D").flip_h = false
 	if direction:
 		velocity.x = direction * SPEED
-		anim.play("Swimming")
+		if !hurtState:
+			anim.play("Swimming")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SWIM_FRICTION)
-		if velocity.x == 0:	
+		if velocity.x == 0 and !hurtState:	
 			anim.play("Idle")
 	
 	move_and_slide()
 	
 func hurt():
-	print("Player Hurt")
-	get_node("AnimatedSprite2D").play("Hurt")
-	await get_node("AnimatedSprite2D").animation_finished
+	hurtState = true
+	anim.play("Hurt")
+	await anim.animation_finished
+	hurtState = false
