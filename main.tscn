@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://yx7vistqip8e"]
+[gd_scene load_steps=5 format=3 uid="uid://yx7vistqip8e"]
 
 [ext_resource type="PackedScene" uid="uid://l68bvb1w4xdr" path="res://fish.tscn" id="1_8vvhi"]
 [ext_resource type="PackedScene" uid="uid://b1ynmndmu6p7q" path="res://player.tscn" id="1_b0kxl"]
+[ext_resource type="PackedScene" uid="uid://h8cyd7s4d4ls" path="res://parallax_background.tscn" id="1_fx0nh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cjye"]
 size = Vector2(1396, 20)
 
 [node name="Main" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_fx0nh")]
 
 [node name="Player" parent="." instance=ExtResource("1_b0kxl")]
 position = Vector2(716, 320)
