@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dn4dipw8nekde" path="res://underwater-diving-files/underwater-diving-files/PNG/environment/midground.png" id="2_kgnyh"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+follow_viewport_scale = 0.01
 script = ExtResource("1_kvtwv")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
@@ -75,6 +76,6 @@ texture = ExtResource("1_cxs5j")
 motion_mirroring = Vector2(1150, 650)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(578.5, 323)
-scale = Vector2(1.20313, 1.26953)
+position = Vector2(576.999, 323.5)
+scale = Vector2(1.2, 1.27148)
 texture = ExtResource("2_kgnyh")

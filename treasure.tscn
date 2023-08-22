@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://by77wdp0ngf4q"]
 
 [ext_resource type="Script" path="res://treasure.gd" id="1_njloo"]
-[ext_resource type="Texture2D" uid="uid://l8goptpsdp51" path="res://64x64 Treasure Chest/Sprites/DungeonChest64x64 3.png" id="1_s0aek"]
+[ext_resource type="Texture2D" uid="uid://b4l6g05ddlqdf" path="res://64x64 Treasure Chest/Sprites/DungeonChest64x64 4.png" id="2_ojyj2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op3be"]
 size = Vector2(40, 15)
@@ -13,7 +13,7 @@ size = Vector2(50, 37)
 script = ExtResource("1_njloo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_s0aek")
+texture = ExtResource("2_ojyj2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 7.5)
