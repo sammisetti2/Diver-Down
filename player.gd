@@ -19,7 +19,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	if Main.oxygen < 0:
+	if Main.oxygen <= 0:
 		get_tree().paused = true
 		$"../CanvasLayer/GameOverScreen".show()
 		
