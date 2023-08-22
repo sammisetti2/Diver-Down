@@ -12,6 +12,6 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	Main.oxygen = 10
 	get_tree().paused = false
-	Main.oxygen = 100
 	get_tree().change_scene_to_file("res://main.tscn")

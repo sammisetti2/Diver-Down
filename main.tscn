@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://yx7vistqip8e"]
+[gd_scene load_steps=12 format=3 uid="uid://yx7vistqip8e"]
 
 [ext_resource type="PackedScene" uid="uid://l68bvb1w4xdr" path="res://fish.tscn" id="1_8vvhi"]
 [ext_resource type="PackedScene" uid="uid://b1ynmndmu6p7q" path="res://player.tscn" id="1_b0kxl"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://by77wdp0ngf4q" path="res://treasure.tscn" id="5_7n20v"]
 [ext_resource type="PackedScene" uid="uid://w44stkgdwq0i" path="res://win_screen.tscn" id="7_3pxmi"]
 [ext_resource type="PackedScene" uid="uid://ddsgl0gtcyofa" path="res://oxygen_label.tscn" id="8_clioh"]
+[ext_resource type="PackedScene" uid="uid://b7q7ys5w174ph" path="res://game_over_screen.tscn" id="9_ucbff"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b04wu"]
 texture = ExtResource("2_gl80f")
@@ -2026,9 +2027,10 @@ texture = ExtResource("2_gl80f")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_b04wu")
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("gameOver")]
 process_mode = 1
 script = ExtResource("1_cb5mj")
+gameOver = NodePath("CanvasLayer/GameOverScreen")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_fx0nh")]
 
@@ -2055,8 +2057,11 @@ process_mode = 3
 [node name="WinScreen" parent="CanvasLayer" instance=ExtResource("7_3pxmi")]
 process_mode = 2
 
+[node name="GameOverScreen" parent="CanvasLayer" instance=ExtResource("9_ucbff")]
+process_mode = 2
+
 [node name="OxygenLabel" parent="CanvasLayer" instance=ExtResource("8_clioh")]
-process_mode = 1
+process_mode = 3
 
 [node name="OxygenTimer" type="Timer" parent="."]
 process_callback = 0
