@@ -2059,7 +2059,6 @@ position = Vector2(352, 624)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
-visible = false
 
 [node name="WinScreen" parent="CanvasLayer" instance=ExtResource("7_3pxmi")]
 process_mode = 2
