@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 BackgroundMusic="*res://background_music.tscn"
 Main="*res://main.gd"
 
+[display]
+
+window/size/resizable=false
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

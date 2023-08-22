@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://cnmiwjuxeuya0" path="res://underwater-diving-files/underwater-diving-files/Sound/watery_cave_loop.ogg" id="1_jakur"]
 
-[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
 process_mode = 3
 stream = ExtResource("1_jakur")
 autoplay = true
