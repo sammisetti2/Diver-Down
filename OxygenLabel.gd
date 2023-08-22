@@ -8,4 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	text = "Oxygen: " + str(get_node("../..").oxygen)
+	#For some reason using get node doesn't work. Should research to understand why
+	if Main.oxygen < 0:
+		text = "Oxygen: 0"
+	else:
+		text = "Oxygen: " + str(Main.oxygen)
