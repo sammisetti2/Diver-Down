@@ -2,14 +2,14 @@ extends CharacterBody2D
 
 @onready var anim = get_node("AnimationPlayer")
 
-const SPEED = 200.0
+const SPEED = 150.0
 const SWIM_UP_VELOCITY = -150.0
 const SWIM_DOWN_VELOCITY = 50
 const SWIM_FRICTION = 10
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 0.09
-var swim_velocity_cap : float = 200
+var swim_velocity_cap : float = 100
 
 var hurtState
 
