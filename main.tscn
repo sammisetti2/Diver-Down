@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://yx7vistqip8e"]
+[gd_scene load_steps=11 format=3 uid="uid://yx7vistqip8e"]
 
 [ext_resource type="PackedScene" uid="uid://l68bvb1w4xdr" path="res://fish.tscn" id="1_8vvhi"]
 [ext_resource type="PackedScene" uid="uid://b1ynmndmu6p7q" path="res://player.tscn" id="1_b0kxl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bi7h072nmxqst" path="res://underwater-diving-files/underwater-diving-files/PNG/environment/tiles.png" id="2_gl80f"]
 [ext_resource type="PackedScene" uid="uid://by77wdp0ngf4q" path="res://treasure.tscn" id="5_7n20v"]
 [ext_resource type="PackedScene" uid="uid://w44stkgdwq0i" path="res://win_screen.tscn" id="7_3pxmi"]
+[ext_resource type="PackedScene" uid="uid://ddsgl0gtcyofa" path="res://oxygen_label.tscn" id="8_clioh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b04wu"]
 texture = ExtResource("2_gl80f")
@@ -2049,6 +2050,16 @@ player = NodePath("../../Player")
 position = Vector2(352, 640)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-process_mode = 2
+process_mode = 3
 
 [node name="WinScreen" parent="CanvasLayer" instance=ExtResource("7_3pxmi")]
+process_mode = 2
+
+[node name="OxygenLabel" parent="CanvasLayer" instance=ExtResource("8_clioh")]
+process_mode = 1
+
+[node name="OxygenTimer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
+[connection signal="timeout" from="OxygenTimer" to="." method="_on_oxygen_timer_timeout"]
