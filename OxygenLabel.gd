@@ -8,6 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print("Hi")
 	text = "Oxygen: " + str(get_node("../..").oxygen)
-	pass

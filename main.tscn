@@ -2050,11 +2050,13 @@ player = NodePath("../../Player")
 position = Vector2(352, 640)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-process_mode = 2
+process_mode = 3
 
 [node name="WinScreen" parent="CanvasLayer" instance=ExtResource("7_3pxmi")]
+process_mode = 2
 
 [node name="OxygenLabel" parent="CanvasLayer" instance=ExtResource("8_clioh")]
+process_mode = 1
 
 [node name="OxygenTimer" type="Timer" parent="."]
 process_callback = 0

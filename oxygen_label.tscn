@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddsgl0gtcyofa"]
 
-[ext_resource type="Script" path="res://OxygenLabel.gd" id="1_f75pm"]
+[ext_resource type="Script" path="res://oxygenlabel.gd" id="1_f75pm"]
 
 [node name="OxygenLabel" type="Label"]
 offset_left = 51.0
