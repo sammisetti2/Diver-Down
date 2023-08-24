@@ -33,6 +33,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 384.0
 offset_top = 336.0
 offset_right = 768.0
@@ -43,6 +44,7 @@ texture_hover = ExtResource("5_kpfn1")
 stretch_mode = 0
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 479.0
 offset_top = 368.0
 offset_right = 671.0

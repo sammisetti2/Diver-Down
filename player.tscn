@@ -150,9 +150,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_85ntm"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xm01f"]
 radius = 13.0
-height = 54.0
+height = 36.0
 
 [sub_resource type="Animation" id="Animation_1bti5"]
 resource_name = "Hurt"
@@ -272,7 +272,8 @@ animation = &"Hurt"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_85ntm")
+position = Vector2(2, -2)
+shape = SubResource("CapsuleShape2D_xm01f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
