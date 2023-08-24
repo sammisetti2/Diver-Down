@@ -1,6 +1,6 @@
 extends Node2D
 
-var oxygen = 60
+var oxygen = 10
 @export var gameOver : Control
 
 func _ready():

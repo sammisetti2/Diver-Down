@@ -10,8 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
-
-func _on_button_pressed():
-	Main.oxygen = 10
+func _on_texture_button_pressed():
+	Main.oxygen = 60
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://main.tscn")

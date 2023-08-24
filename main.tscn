@@ -4082,7 +4082,7 @@ position = Vector2(144, 2688)
 position = Vector2(96, 3744)
 
 [node name="Treasure" parent="." instance=ExtResource("5_7n20v")]
-position = Vector2(1104, 6848)
+position = Vector2(192, 608)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3

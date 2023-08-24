@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://w44stkgdwq0i"]
+[gd_scene load_steps=8 format=3 uid="uid://w44stkgdwq0i"]
 
 [ext_resource type="Script" path="res://win_screen.gd" id="1_iupw5"]
+[ext_resource type="FontFile" uid="uid://cmpsd1ga071d5" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Pixel Square.ttf" id="2_hyy4g"]
+[ext_resource type="Texture2D" uid="uid://cribmpiw6oi4q" path="res://ButtonTextures/Button Pack - ok_lavender/Individual Frames/[5] Blue/[1] Normal.png" id="3_j45mr"]
+[ext_resource type="Texture2D" uid="uid://cst5u2hlqgtls" path="res://ButtonTextures/Button Pack - ok_lavender/Individual Frames/[5] Blue/[2] Clicked.png" id="4_tr2pb"]
+[ext_resource type="Texture2D" uid="uid://dq55oqdmerhxa" path="res://ButtonTextures/Button Pack - ok_lavender/Individual Frames/[5] Blue/[3] Hover.png" id="5_kpfn1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kidb8"]
-font_size = 24
+font = ExtResource("2_hyy4g")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_wh3mv"]
+font = ExtResource("2_hyy4g")
+font_size = 20
 
 [node name="WinScreen" type="Control"]
 layout_mode = 3
@@ -11,14 +20,6 @@ anchors_preset = 0
 offset_right = 512.0
 offset_bottom = 384.0
 script = ExtResource("1_iupw5")
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 384.0
-offset_top = 384.0
-offset_right = 768.0
-offset_bottom = 480.0
-text = "New Game"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -31,4 +32,24 @@ label_settings = SubResource("LabelSettings_kidb8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 384.0
+offset_top = 336.0
+offset_right = 768.0
+offset_bottom = 448.0
+texture_normal = ExtResource("3_j45mr")
+texture_pressed = ExtResource("4_tr2pb")
+texture_hover = ExtResource("5_kpfn1")
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 479.0
+offset_top = 368.0
+offset_right = 671.0
+offset_bottom = 401.0
+text = "New Game"
+label_settings = SubResource("LabelSettings_wh3mv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
