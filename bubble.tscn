@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bck3pl0hwy4qh"]
+[gd_scene load_steps=19 format=3 uid="uid://bck3pl0hwy4qh"]
 
 [ext_resource type="Texture2D" uid="uid://dek8op6msqo3f" path="res://underwater-diving-files/underwater-diving-files/PNG/Bubble.png" id="1_42i8w"]
 [ext_resource type="Script" path="res://bubble.gd" id="1_wqpg5"]
+[ext_resource type="AudioStream" uid="uid://jtyg3othuxp6" path="res://underwater-diving-files/underwater-diving-files/Sound/Drop.wav" id="3_4cxno"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0jvmn"]
 atlas = ExtResource("1_42i8w")
@@ -116,5 +117,8 @@ shape = SubResource("CircleShape2D_5ajmg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_qe0d3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4cxno")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

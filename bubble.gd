@@ -14,4 +14,7 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	if body.name == 'Player':
 		Main.oxygen += 10
+		$CollisionShape2D.set_deferred("disabled", true)
+		$AudioStreamPlayer2D.play()
+		await $AudioStreamPlayer2D.finished
 		self.queue_free()
