@@ -12,7 +12,7 @@ font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_wh3mv"]
 font = ExtResource("2_hyy4g")
-font_size = 20
+font_size = 24
 
 [node name="WinScreen" type="Control"]
 layout_mode = 3
@@ -45,11 +45,11 @@ stretch_mode = 0
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 479.0
-offset_top = 368.0
-offset_right = 671.0
+offset_left = 439.0
+offset_top = 362.0
+offset_right = 721.0
 offset_bottom = 401.0
-text = "New Game"
+text = "New Game (Press N)"
 label_settings = SubResource("LabelSettings_wh3mv")
 horizontal_alignment = 1
 vertical_alignment = 1
