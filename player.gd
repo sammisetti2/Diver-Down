@@ -55,6 +55,7 @@ func _physics_process(delta):
 	
 func hurt():
 	hurtState = true
+	$AudioStreamPlayer2D.play()
 	anim.play("Hurt")
 	await anim.animation_finished
 	hurtState = false
