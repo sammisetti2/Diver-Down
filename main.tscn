@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://yx7vistqip8e"]
+[gd_scene load_steps=16 format=3 uid="uid://yx7vistqip8e"]
 
 [ext_resource type="PackedScene" uid="uid://l68bvb1w4xdr" path="res://fish.tscn" id="1_8vvhi"]
 [ext_resource type="PackedScene" uid="uid://b1ynmndmu6p7q" path="res://player.tscn" id="1_b0kxl"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://by77wdp0ngf4q" path="res://treasure.tscn" id="5_7n20v"]
 [ext_resource type="PackedScene" uid="uid://w44stkgdwq0i" path="res://win_screen.tscn" id="7_3pxmi"]
 [ext_resource type="PackedScene" uid="uid://bck3pl0hwy4qh" path="res://bubble.tscn" id="7_jok0f"]
+[ext_resource type="PackedScene" uid="uid://dvh80od4c6hqx" path="res://mine.tscn" id="7_mg6nd"]
 [ext_resource type="PackedScene" uid="uid://ddsgl0gtcyofa" path="res://oxygen_label.tscn" id="8_clioh"]
 [ext_resource type="PackedScene" uid="uid://b7q7ys5w174ph" path="res://game_over_screen.tscn" id="9_ucbff"]
 
@@ -4102,6 +4103,9 @@ player = NodePath("../../Player")
 [node name="Fish5" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("1_8vvhi")]
 position = Vector2(864, 2992)
 player = NodePath("../../Player")
+
+[node name="Mine" parent="Enemies" instance=ExtResource("7_mg6nd")]
+position = Vector2(1280, 3810)
 
 [node name="Bubbles" type="Node2D" parent="."]
 
