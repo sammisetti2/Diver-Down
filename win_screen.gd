@@ -8,10 +8,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Input.is_key_pressed(KEY_N):
+		_on_texture_button_pressed()
 	pass
 
-
-func _on_button_pressed():
-	get_tree().paused = false
-	Main.oxygen = 100
+func _on_texture_button_pressed():
+	Main.oxygen = 60
 	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().paused = false

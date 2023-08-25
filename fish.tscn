@@ -108,13 +108,11 @@ position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_t6hmo")
 
 [node name="PlayerDetection" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
 shape = SubResource("CircleShape2D_pfuou")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
 position = Vector2(-2, 1)

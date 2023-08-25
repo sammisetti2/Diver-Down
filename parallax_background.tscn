@@ -9,6 +9,7 @@ follow_viewport_scale = 0.01
 script = ExtResource("1_kvtwv")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+texture_repeat = 2
 motion_mirroring = Vector2(1150, 650)
 
 [node name="Background" type="Sprite2D" parent="ParallaxLayer"]
@@ -73,6 +74,7 @@ scale = Vector2(1.12153, 1.01172)
 texture = ExtResource("1_cxs5j")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+texture_repeat = 2
 motion_mirroring = Vector2(1150, 650)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]

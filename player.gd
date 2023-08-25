@@ -3,13 +3,13 @@ extends CharacterBody2D
 @onready var anim = get_node("AnimationPlayer")
 
 const SPEED = 150.0
-const SWIM_UP_VELOCITY = -150.0
+const SWIM_UP_VELOCITY = -100.0
 const SWIM_DOWN_VELOCITY = 50
 const SWIM_FRICTION = 10
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 0.09
-var swim_velocity_cap : float = 100
+var swim_velocity_cap : float = 150
 
 var hurtState
 
@@ -18,7 +18,6 @@ func _ready():
 	hurtState = false
 
 func _physics_process(delta):
-	
 	if Main.oxygen <= 0:
 		get_tree().paused = true
 		$"../CanvasLayer/GameOverScreen".show()
@@ -55,6 +54,7 @@ func _physics_process(delta):
 	
 func hurt():
 	hurtState = true
+	$AudioStreamPlayer2D.play()
 	anim.play("Hurt")
 	await anim.animation_finished
 	hurtState = false
