@@ -4226,6 +4226,9 @@ position = Vector2(232, 2602)
 [node name="Mine6" parent="Enemies" instance=ExtResource("7_mg6nd")]
 position = Vector2(1888, 1778)
 
+[node name="Mine20" parent="Enemies" instance=ExtResource("7_mg6nd")]
+position = Vector2(2080, 1858)
+
 [node name="Mine7" parent="Enemies" instance=ExtResource("7_mg6nd")]
 position = Vector2(384, 1970)
 
