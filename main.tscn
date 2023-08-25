@@ -4186,7 +4186,7 @@ position = Vector2(1624, 1722)
 player = NodePath("../../Player")
 
 [node name="Fish13" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("1_8vvhi")]
-position = Vector2(192, 1330)
+position = Vector2(288, 1330)
 player = NodePath("../../Player")
 
 [node name="Fish5" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("1_8vvhi")]
@@ -4314,7 +4314,6 @@ position = Vector2(1320, 5266)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
-visible = false
 
 [node name="WinScreen" parent="CanvasLayer" instance=ExtResource("7_3pxmi")]
 process_mode = 2

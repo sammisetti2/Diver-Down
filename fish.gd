@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 110.0
+const SPEED = 115.0
 
 @export var player : CharacterBody2D
 

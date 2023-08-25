@@ -14,5 +14,5 @@ func _process(delta):
 
 func _on_texture_button_pressed():
 	Main.oxygen = 60
-	get_tree().paused = false
 	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().paused = false
