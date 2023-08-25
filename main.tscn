@@ -4256,7 +4256,7 @@ position = Vector2(1832, 178)
 [node name="Bubbles" type="Node2D" parent="."]
 
 [node name="Bubble" parent="Bubbles" instance=ExtResource("7_jok0f")]
-position = Vector2(264, 498)
+position = Vector2(200, 498)
 
 [node name="Bubble2" parent="Bubbles" instance=ExtResource("7_jok0f")]
 position = Vector2(2080, 1488)
@@ -4314,6 +4314,7 @@ position = Vector2(1320, 5266)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+visible = false
 
 [node name="WinScreen" parent="CanvasLayer" instance=ExtResource("7_3pxmi")]
 process_mode = 2
